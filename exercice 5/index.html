@@ -6,11 +6,29 @@
   </head>
   <body>
     <div class="conteneur">
-      <img src="images/image1.jpg" id="image1" />
-      <img src="images/image2.jpg" id="image2" />
-      <img src="images/image3.jpg" id="image3" />
-      <img src="images/image4.jpg" id="image4" />
-      <img src="images/image5.jpg" id="image5" />
+      <img src="images/image1.jpg" id="image1" onmouseover="onHover('image1')"
+      onmouseout="offHover('image1')" />
+      <img src="images/image2.jpg" id="image2" onmouseover="onHover('image2')"
+      onmouseout="offHover('image2')" />
+      <img src="images/image3.jpg" id="image3" onmouseover="onHover('image3')"
+      onmouseout="offHover('image3')"/>
+      <img src="images/image4.jpg" id="image4" onmouseover="onHover('image4')"
+      onmouseout="offHover('image4')"/>
+      <img src="images/image5.jpg" id="image5" onmouseover="onHover('image5')"
+      onmouseout="offHover('image5')"/>
     </div>
+
+    <script type="text/javascript">
+    function onHover(image)
+    {
+
+      document.getElementById(image).setAttribute('src', 'images/'+image+'_2.jpg');
+    }
+
+    function offHover(image)
+    {
+      document.getElementById(image).setAttribute('src', 'images/'+image+'.jpg');
+    }
+    </script>
   </body>
 </html>

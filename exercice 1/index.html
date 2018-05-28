@@ -5,6 +5,22 @@
     <title>Exercice 1</title>
   </head>
   <body>
-      <img src="images/image1.jpg" id="image1" />
+
+      <img src="images/image1.jpg" id="image1" onmouseover="onHover('image1')"
+      onmouseout="offHover('image1')"/>
+
+      <script type="text/javascript">
+
+      function onHover(image)
+      {
+
+        document.getElementById(image).setAttribute('src', 'images/image1_2.jpg');
+      }
+
+      function offHover(image)
+      {
+        document.getElementById(image).setAttribute('src', 'images/image1.jpg');
+      }
+      </script>
   </body>
 </html>
